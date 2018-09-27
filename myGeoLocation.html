@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geolocation API サンプル</title>
+
+<style>
+<!--
+    * {
+        font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        font-size: 97%;
+        transition: visibility 0.25s ease-in-out;
+    }
+    div#button {
+        color: #fff;
+        margin: 20px 0;
+        padding: 5px 10px;
+        background: #1e90ff;
+        border-radius: 4px;
+        box-shadow: 0 3px 0 #000099;
+        display: inline-block;
+        cursor: pointer;
+    }
+-->
+</style>
+
+<script src="./js/myGeoLocation.js"></script>
+
+<script>
+<!--//
+
+    myGeoLocation.error_element_id = 'error_message';
+
+    function searchByLocation(lat, lng)
+    {
+        var e = document.loc_form;
+        e.lat.value = lat;
+        e.lng.value = lng;
+        e.submit();
+    }
+
+//-->
+</script>
+
+</head>
+<body>
+
+<div id="error_message"></div>
+
+<form name="loc_form" action="" method="get">
+    <input type="text" name="lat" value=""><br>
+    <input type="text" name="lng" value=""><br>
+</form>
+<div id="button" onclick="javascript: myGeoLocation.make();">現在地の位置情報を取得する</div>
+</body>
+</html>
